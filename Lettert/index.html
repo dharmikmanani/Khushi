@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hey Khushi ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ LOADING SCREEN ══════════════════ -->
+  <div id="loader">
+    <div class="loader-heart">
+      <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85 C50 85 5 55 5 28 C5 13 17 3 30 3 C39 3 47 8 50 15 C53 8 61 3 70 3 C83 3 95 13 95 28 C95 55 50 85 50 85Z"/>
+      </svg>
+    </div>
+    <p class="loader-text">Preparing something special for you…</p>
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+  </div>
+
+  <!-- ══════════════════ CURSOR GLOW ══════════════════ -->
+  <div id="cursor-glow"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- ══════════════════ MUSIC CONTROL ══════════════════ -->
+  <div id="music-btn" title="Toggle Music">
+    <span id="music-icon">🎵</span>
+    <span id="music-label">Music</span>
+    <audio id="bg-music" loop>
+      <!-- Replace src with your romantic music file URL -->
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <!-- ══════════════════ FLOATING HEARTS CANVAS ══════════════════ -->
+  <canvas id="heart-canvas"></canvas>
+
+  <!-- ══════════════════ MAIN WRAPPER ══════════════════ -->
+  <main id="main-content">
+
+    <!-- ──────────── SECTION 1: HERO ──────────── -->
+    <section id="hero" class="section">
+      <div class="hero-bg-gradient"></div>
+      <div class="sparkle-field" id="sparkle-field"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">With all my heart 💕</div>
+        <h1 class="hero-title reveal-up">Hey <span class="name-highlight">Khushi</span> ❤️</h1>
+        <div class="hero-subtitle reveal-up">
+          <span id="typing-text"></span><span class="cursor-blink">|</span>
+        </div>
+        <button class="cta-btn reveal-up" id="open-heart-btn" onclick="scrollToLetter()">
+          <span class="btn-icon">💌</span>
+          Open My Heart
+          <div class="btn-ripple"></div>
+        </button>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <div class="scroll-arrow"></div>
+        <p>Scroll to explore our love story</p>
+      </div>
+    </section>
+
+    <!-- ──────────── SECTION 2: LOVE LETTER ──────────── -->
+    <section id="love-letter" class="section">
+      <div class="section-bg-blob blob-pink"></div>
+      <div class="section-bg-blob blob-lavender"></div>
+
+      <div class="section-header reveal-up">
+        <div class="section-tag">💌 From my heart</div>
+        <h2 class="section-title">A Letter Just for You</h2>
+      </div>
+
+      <div class="letter-wrapper reveal-up" id="letter-wrapper">
+        <div class="letter-envelope" id="letter-envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="envelope-heart">💌</div>
+            <p class="envelope-cta">Click to open</p>
+          </div>
+        </div>
+
+        <div class="letter-paper" id="letter-paper">
+          <div class="letter-inner">
+            <div class="letter-deco-top">✦ ✦ ✦</div>
+            <p class="letter-date">Forever & Always ✨</p>
+            <h3 class="letter-salutation">My Dearest <span class="inline-highlight">Khushi</span>,</h3>
+            <p class="letter-body">
+              There are moments in life that feel too perfect to be real — and every single moment with you feels exactly like that. 🌸
+            </p>
+            <p class="letter-body">
+              We'd only known each other for a week or two, but after almost one or two years I finally smiled for real — before you, every smile I had felt fake. The way you came into my life was completely different and changed everything. 💛
+            </p>
+            <p class="letter-body">
+              I didn't know what <span class="letter-accent">home</span> felt like until I found it in your smile. You are my warmth on cold nights, my favorite notification, my safest place. 🌙
+            </p>
+            <p class="letter-body">
+              I never want to stop choosing you. Every single day. <span class="letter-accent">Forever feels too short</span> when I'm with you. 🌹
+            </p>
+            <p class="letter-body">
+              So here I am — heart wide open — asking you the most important question of my life…
+            </p>
+            <div class="letter-emoji-row">💕 🌸 ✨ 🦋 💫 🌹 💖</div>
+            <p class="letter-sign">Yours completely & hopelessly,</p>
+            <p class="letter-name">Yours Dharmik 🥺</p>
+            <div class="letter-deco-bottom">♡ ♡ ♡</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────── SECTION 3: REASONS I LOVE YOU ──────────── -->
+    <section id="reasons" class="section">
+      <div class="section-bg-blob blob-pink"></div>
+      <div class="section-bg-blob blob-lavender" style="right:-100px;left:auto;bottom:0;top:auto"></div>
+
+      <div class="section-header reveal-up">
+        <div class="section-tag">💝 Reasons</div>
+        <h2 class="section-title">Why I Love You</h2>
+        <p class="section-subtitle">Let me count the ways… 🌹</p>
+      </div>
+
+      <div class="reasons-grid" id="reasons-grid">
+        <div class="reason-card" data-delay="0">
+          <div class="reason-icon">😂</div>
+          <h4>Your Laugh</h4>
+          <p>It's the most beautiful sound I've ever heard. I'd do anything to hear it every day.</p>
+        </div>
+        <div class="reason-card" data-delay="100">
+          <div class="reason-icon">🧠</div>
+          <h4>Your Mind</h4>
+          <p>The way you think, the things you notice — you see the world differently and it's breathtaking.</p>
+        </div>
+        <div class="reason-card" data-delay="200">
+          <div class="reason-icon">🌙</div>
+          <h4>Late Night Talks</h4>
+          <p>When the world is quiet and it's just us — those are the moments I treasure most.</p>
+        </div>
+        <div class="reason-card" data-delay="300">
+          <div class="reason-icon">🤗</div>
+          <h4>Your Warmth</h4>
+          <p>You make everyone around you feel seen and loved. That's rare. That's you.</p>
+        </div>
+        <div class="reason-card" data-delay="400">
+          <div class="reason-icon">✨</div>
+          <h4>Your Spark</h4>
+          <p>You light up every room, every moment, every ordinary Tuesday just by existing.</p>
+        </div>
+        <div class="reason-card" data-delay="500">
+          <div class="reason-icon">🌸</div>
+          <h4>Simply You</h4>
+          <p>Every little thing — the silly things, the quiet things — I love all of it. All of you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────── SECTION 4: TIMELINE ──────────── -->
+    <section id="timeline" class="section">
+      <div class="section-bg-blob blob-peach" style="left:auto;right:-120px;top:10%"></div>
+
+      <div class="section-header reveal-up">
+        <div class="section-tag">📖 Our Story</div>
+        <h2 class="section-title">How We Happened</h2>
+        <p class="section-subtitle">Every chapter better than the last 💫</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item tl-left reveal-left">
+          <div class="tl-dot">💬</div>
+          <div class="tl-card">
+            <div class="tl-date">Day One</div>
+            <h4 class="tl-title">First Chat</h4>
+            <p class="tl-desc">That first message. I had no idea I was about to meet my favourite person.</p>
+          </div>
+        </div>
+
+        <div class="timeline-heart-connector">💕</div>
+
+        <div class="timeline-item tl-right reveal-right">
+          <div class="tl-dot">📞</div>
+          <div class="tl-card">
+            <div class="tl-date">Getting closer</div>
+            <h4 class="tl-title">First Call</h4>
+            <p class="tl-desc">Hearing your voice for the first time. I smiled for hours after we hung up.</p>
+          </div>
+        </div>
+
+        <div class="timeline-heart-connector">💖</div>
+
+        <div class="timeline-item tl-right reveal-right">
+          <div class="tl-dot">🌹</div>
+          <div class="tl-card">
+            <div class="tl-date">The best day</div>
+            <h4 class="tl-title">First Date</h4>
+            <p class="tl-desc">Nervous, excited, completely smitten. I knew from that evening — it was you.</p>
+          </div>
+        </div>
+
+        <div class="timeline-heart-connector">🌸</div>
+
+        <div class="timeline-item tl-left reveal-left">
+          <div class="tl-dot">💞</div>
+          <div class="tl-card">
+            <div class="tl-date">Forever</div>
+            <h4 class="tl-title">Falling in Love</h4>
+            <p class="tl-desc">I didn't fall — I floated. Softly, completely, irreversibly into love with you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────── SECTION 6: PROPOSAL ──────────── -->
+    <section id="proposal" class="section">
+      <div class="proposal-bg"></div>
+      <canvas id="confetti-canvas"></canvas>
+
+      <div class="proposal-content">
+        <div class="proposal-hearts-ring" id="proposal-hearts-ring">
+          <span style="--i:0">💕</span><span style="--i:1">🌸</span><span style="--i:2">✨</span>
+          <span style="--i:3">💖</span><span style="--i:4">🌹</span><span style="--i:5">💫</span>
+          <span style="--i:6">🦋</span><span style="--i:7">💝</span>
+        </div>
+
+        <div class="proposal-text reveal-up">
+          <p class="proposal-pre">After all this time, all these moments…</p>
+          <h2 class="proposal-question">Will You Be<br /><span class="proposal-glow">Mine Forever?</span></h2>
+          <p class="proposal-sub">💍 The most important question I'll ever ask 💍</p>
+        </div>
+
+        <div class="proposal-buttons reveal-up">
+          <button class="btn-yes" id="btn-yes" onclick="onYes()">
+            <span>Yes!! 💖</span>
+            <div class="btn-sparkle"></div>
+          </button>
+          <button class="btn-of-course" id="btn-of-course" onmouseover="runAway(this)" onclick="onYes()">
+            Of Course! 🥰
+          </button>
+        </div>
+      </div>
+
+      <!-- YES Popup -->
+      <div id="yes-popup" class="yes-popup">
+        <div class="yes-popup-inner">
+          <div class="yes-emoji-burst">💍✨🎉💖🌸🥂</div>
+          <h3 class="yes-title">She Said YES!! 🎊</h3>
+          <p class="yes-msg">You just made me the luckiest person alive. I promise to love you endlessly, choose you daily, and make you smile forever. 💕</p>
+          <p class="yes-sub">This is just the beginning of our forever ♾️</p>
+          <button class="yes-close-btn" onclick="closePopup()">Continue Our Story 🌸</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────── SECTION 7: FINAL SURPRISE ──────────── -->
+    <section id="finale" class="section">
+      <canvas id="fireworks-canvas"></canvas>
+      <div class="finale-bg"></div>
+
+      <div class="finale-content">
+        <div class="finale-frame reveal-up" id="finale-frame">
+          <div class="finale-frame-border">
+            <div class="finale-img-wrap">
+              <!-- Replace with your actual photo -->
+              <img src="https://picsum.photos/seed/couple/400/400" alt="Us" id="finale-photo" />
+            </div>
+          </div>
+          <div class="finale-frame-hearts">
+            <span class="fh" style="--a:0deg">💕</span>
+            <span class="fh" style="--a:45deg">✨</span>
+            <span class="fh" style="--a:90deg">🌸</span>
+            <span class="fh" style="--a:135deg">💫</span>
+            <span class="fh" style="--a:180deg">💖</span>
+            <span class="fh" style="--a:225deg">🌹</span>
+            <span class="fh" style="--a:270deg">🦋</span>
+            <span class="fh" style="--a:315deg">💝</span>
+          </div>
+        </div>
+
+        <div class="finale-text reveal-up">
+          <p class="finale-pre">And through it all…</p>
+          <h2 class="finale-main">I Love You</h2>
+          <div class="infinity-badge">♾️ Infinity ♾️</div>
+          <p class="finale-message">
+            Not just today. Not just tomorrow. But every morning I wake up and every night I fall asleep — it will always be you. My pookie. My home. My everything. 🌙
+          </p>
+          <div class="finale-signature">— Yours, Always & Forever 💕</div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- end #main-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
