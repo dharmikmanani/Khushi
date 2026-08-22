@@ -1,4 +1,4 @@
-# Khushi
+
 # ❤️ Romantic Proposal Website
 
 A fully animated cinematic proposal website built using HTML, CSS, and JavaScript.
